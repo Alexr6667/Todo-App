@@ -1,0 +1,166 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+/***
+    The new CSS reset - version 1.8.5 (last updated 14.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+
+/* Preferred box-sizing value */
+:root {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(41deg 66% 89%);
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  text-align: center;
+}
+
+#heading {
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: hsl(166deg 51% 95%);
+  background-color: hsl(351deg 75% 65%);
+}
+
+.nav-item {
+  display: inline;
+  list-style: none;
+  font-size: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: hsl(351deg 75% 65%);
+}
+
+i {
+  padding-right: 0.5rem;
+}
+
+.todo-container-daily,
+.todo-container-work,
+#heading {
+  max-width: 70rem;
+  margin: 3rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+  font-size: 3.3rem;
+  border: none;
+}
+
+input::placeholder {
+  color: hsl(0deg 0% 69%);
+}
+
+input[type="checkbox"] {
+  margin: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+input[type="checkbox"]:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: hsl(351deg 75% 65%);
+}
+
+/* input[type="text"], */
+.item {
+  background-color: white;
+  min-height: 8rem;
+  border: none;
+  border-bottom: 0.2px solid hsl(0deg 0% 97%);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.new-item-button {
+  width: 6rem;
+  height: 6rem;
+  background-color: hsl(351deg 75% 65%);
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+
+p {
+  margin: 0;
+  padding: 2rem 4rem;
+  font-size: 3.3rem;
+  font-weight: 400;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: hsl(351deg 35% 65%);
+}
+
+footer,
+p {
+  font-size: 3rem;
+}

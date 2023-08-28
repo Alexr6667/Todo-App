@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+    <!-- Daily Todos -->
+
+    <div class="todo-container-daily" id="daily">
+
+        <div>
+            <form action="/addTodoDaily" class="form-container item" method="POST">
+                <!-- <input type="checkbox" name="todoComplete" value="1"> -->
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off" required>
+                <button type="submit" class="new-item-button">+</button>
+            </form>
+        </div>
+
+        <% for (let i=0; i < todosDaily.length; i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= todosDaily[i] %>
+                </p>
+            </div>
+            <% } %>
+
+    </div>
+
+    <%- include("partials/footer.ejs") %>

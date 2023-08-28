@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+    <!-- Work Todos -->
+
+    <div class="todo-container-work" id="work">
+
+        <div>
+            <form action="/addTodoWork" class="form-container item" method="POST">
+                <!-- <input type="checkbox" name="todoComplete" value="1"> -->
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off" required>
+                <button type="submit" class="new-item-button">+</button>
+            </form>
+        </div>
+
+        <% for (let i=0; i < todosWork.length; i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= todosWork[i] %>
+                </p>
+            </div>
+            <% } %>
+
+    </div>
+
+    <%- include("partials/footer.ejs") %>
